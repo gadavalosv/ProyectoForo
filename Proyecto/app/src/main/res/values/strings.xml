@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ProyectoForo</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Entrar</string>
+    <string name="name">Nombre</string>
+    <string name="lastN">Apellidos</string>
+    <string name="registry">Registrar</string>
 </resources>
