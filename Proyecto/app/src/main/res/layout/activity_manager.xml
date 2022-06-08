@@ -5,8 +5,7 @@
     android:id="@+id/layoutManager"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/material_dynamic_neutral80"
-    tools:context=".ManagerMain">
+    android:background="@color/material_dynamic_neutral80">
 
     <ImageView
         android:id="@+id/img2"
