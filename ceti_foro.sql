@@ -5,19 +5,19 @@ use ceti_foro;
 
 create table administrador (
 	id smallint not null AUTO_INCREMENT,
-    nombre varchar(30) not null,
-    apellidos varchar(30) not null,
-	correo varchar(40) not null,
-    contrasenia varchar(50) not null,
+    -- nombre varchar(30) not null,
+    -- apellidos varchar(30) not null,
+	-- correo varchar(40) not null,
+    -- contrasenia varchar(50) not null,
     primary key (id)
 );
 
 create table cliente (
 	id int not null AUTO_INCREMENT,
-    nombre varchar(30) not null,
-    apellidos varchar(30) not null,
-	correo varchar(40) not null,
-    contrasenia varchar(50) not null,
+    -- nombre varchar(30) not null,
+    -- apellidos varchar(30) not null,
+	-- correo varchar(40) not null,
+    -- contrasenia varchar(50) not null,
     primary key (id)
 );
 
