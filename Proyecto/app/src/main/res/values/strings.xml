@@ -6,4 +6,14 @@
     <string name="name">Nombre</string>
     <string name="lastN">Apellidos</string>
     <string name="registry">Registrar</string>
+    <string name="blogTitulo">Blog</string>
+    <string name="contenidoForo">Contenido Del Foro</string>
+    <string name="seccionComentarios">Seccion De Comentarios</string>
+    <string name="dejarComentario">Escriba un comentario</string>
+    <string name="comentar">Comentar</string>
+    <string name="Reportar">Reportar</string>
+    <string name="blogTitulo2">Nuevo Blog</string>
+    <string name="Titulo">Titulo del Blog</string>
+    <string name="Contenido">Contenido</string>
+    <string name="Subir">Subir</string>
 </resources>

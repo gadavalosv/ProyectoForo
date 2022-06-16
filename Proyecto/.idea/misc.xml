@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< Updated upstream
         <entry key="..\:/Users/danie/AndroidStudioProjects/ProyectoFinalMoviles/ProyectoForo/Proyecto/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3675" />
         <entry key="..\:/Users/danie/AndroidStudioProjects/ProyectoFinalMoviles/ProyectoForo/Proyecto/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3675" />
         <entry key="..\:/Users/danie/AndroidStudioProjects/ProyectoFinalMoviles/ProyectoForo/Proyecto/app/src/main/res/drawable/ico-logo1_background.xml" value="0.3675" />
@@ -12,6 +13,18 @@
         <entry key="..\:/Users/danie/AndroidStudioProjects/ProyectoFinalMoviles/ProyectoForo/Proyecto/app/src/main/res/layout/activity_welcome.xml" value="0.358695652173913" />
         <entry key="..\:/Users/danie/AndroidStudioProjects/ProyectoFinalMoviles/ProyectoForo/Proyecto/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3085" />
         <entry key="..\:/Users/danie/AndroidStudioProjects/ProyectoFinalMoviles/ProyectoForo/Proyecto/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.3675" />
+=======
+        <entry key="..\:/Desktop/ProyectoForo/Proyecto/app/src/main/res/drawable/ico-logo1_background.xml" value="0.1975" />
+        <entry key="..\:/Desktop/ProyectoForo/Proyecto/app/src/main/res/layout/activity_blog.xml" value="0.3625" />
+        <entry key="..\:/Desktop/ProyectoForo/Proyecto/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Desktop/ProyectoForo/Proyecto/app/src/main/res/layout/activity_manager.xml" value="0.3625" />
+        <entry key="..\:/Desktop/ProyectoForo/Proyecto/app/src/main/res/layout/activity_newblog.xml" value="0.3625" />
+        <entry key="..\:/Desktop/ProyectoForo/Proyecto/app/src/main/res/layout/activity_welcome.xml" value="0.3625" />
+        <entry key="..\:/Desktop/ProyectoForo/Proyecto/app/src/main/res/mipmap-anydpi-v26/ico-logo1.xml" value="0.114" />
+        <entry key="..\:/Pasar a nueva compu/C.E.T.I/Ingenieria/moviles/ProyectoForo/Proyecto/app/src/main/res/layout/activity_main.xml" value="0.19701086956521738" />
+        <entry key="..\:/Pasar a nueva compu/C.E.T.I/Ingenieria/moviles/ProyectoForo/Proyecto/app/src/main/res/layout/activity_manager.xml" value="0.2" />
+        <entry key="..\:/Pasar a nueva compu/C.E.T.I/Ingenieria/moviles/ProyectoForo/Proyecto/app/src/main/res/layout/activity_welcome.xml" value="0.2" />
+>>>>>>> Stashed changes
       </map>
     </option>
   </component>
