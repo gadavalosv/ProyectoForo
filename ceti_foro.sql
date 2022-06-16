@@ -71,5 +71,5 @@ create table calificacion_respuesta (
     calificacion decimal(3,1),
     primary key (id),
     FOREIGN KEY (id_cliente) REFERENCES cliente(id),
-    FOREIGN KEY (id_respuesta) REFERENCES respuestaadministrador(id)
+    FOREIGN KEY (id_respuesta) REFERENCES respuesta(id)
 );
