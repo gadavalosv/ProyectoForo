@@ -1,0 +1,13 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="SideBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--
+        <item name="colorPrimary">@color/blue3</item>
+        -->
+        <item name="colorPrimaryDark">@color/blue3</item>
+        <!--
+        <item name="colorAccent">#FF4081</item>
+        -->
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+</resources>

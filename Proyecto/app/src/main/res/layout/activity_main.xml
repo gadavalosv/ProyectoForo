@@ -5,19 +5,67 @@
     android:id="@+id/layoutMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/material_dynamic_neutral80"
     android:backgroundTint="@color/black"
     android:backgroundTintMode="add"
     android:foregroundTint="#5FA0D9"
     android:foregroundTintMode="add"
     tools:context=".MainActivity">
 
+    <!-- This DrawerLayout has two children at the root  -->
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- This LinearLayout represents the contents of the screen  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- The ActionBar displayed at the top -->
+            <include
+                layout="@layout/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- The main content view where fragments are loaded -->
+            <FrameLayout
+                android:id="@+id/flContent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <!-- The navigation drawer that comes from the left -->
+        <!-- Note that `android:layout_gravity` needs to be set to 'start' -->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nvView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:headerLayout="@layout/navigation_header"
+            app:menu="@menu/navigation_menu" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="149dp"
         android:layout_height="140dp"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="54dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.147"
         tools:srcCompat="@mipmap/ic_launcher_round" />
 
     <TextView
@@ -41,7 +89,6 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="101dp"
         android:ems="10"
-        android:fontFamily="@font/alata"
         android:hint="@string/email"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +103,6 @@
         android:layout_marginTop="37dp"
         android:layout_marginEnd="101dp"
         android:ems="10"
-        android:fontFamily="@font/alata"
         android:hint="@string/password"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,7 +115,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:backgroundTint="#094173"
-        android:fontFamily="@font/alata"
         android:text="@string/login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

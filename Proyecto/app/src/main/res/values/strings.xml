@@ -6,4 +6,15 @@
     <string name="name">Nombre</string>
     <string name="lastN">Apellidos</string>
     <string name="registry">Registrar</string>
+
+    <!--navigation_menu (sidebar)-->
+    <string name="myBlogs">Mis foros</string>
+    <string name="searchBlogs">Buscar foros</string>
+        <!--Only for admin-->
+        <string name="denyAccess">Restringir acceso</string>
+    <string name="logout">Cerrar sesión </string>
+
+    <!--hamburguer icon-->
+    <string name="drawer_open">Abrir sidebar</string>
+    <string name="drawer_close">Cerrar sidebar</string>
 </resources>
