@@ -6,4 +6,27 @@
     <string name="name">Nombre</string>
     <string name="lastN">Apellidos</string>
     <string name="registry">Registrar</string>
+
+    <!--    Activity Blog    -->
+    <string name="edtComentario">Dejar un Comentario</string>
+    <string name="btnComentar">Comentar</string>
+    <string name="tvTituloForo">Título del Foro</string>
+    <string name="edtPregunta">Contenido del foro</string>
+    <string name="btnReportar">Reportar Usuario</string>
+
+    <!--    Activity Ban    -->
+    <string name="tvTituloBan">Usuarios Reportados</string>
+    <string name="btnQuitarReporte">Quitar reporte</string>
+    <string name="btnBloquear">Bloquear</string>
+
+    <!--navigation_menu (sidebar)-->
+    <string name="myBlogs">Mis foros</string>
+    <string name="searchBlogs">Buscar foros</string>
+        <!--Only for admin-->
+        <string name="denyAccess">Restringir acceso</string>
+    <string name="logout">Cerrar sesión </string>
+
+    <!--hamburguer icon-->
+    <string name="drawer_open">Abrir sidebar</string>
+    <string name="drawer_close">Cerrar sidebar</string>
 </resources>

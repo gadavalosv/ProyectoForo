@@ -5,22 +5,23 @@
     android:id="@+id/layoutManager"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/material_dynamic_neutral80"
-    tools:context=".ManagerMain">
+    android:background="@color/material_dynamic_neutral80">
 
     <ImageView
         android:id="@+id/img2"
         android:layout_width="149dp"
         android:layout_height="140dp"
-        tools:layout_editor_absoluteX="131dp"
-        tools:layout_editor_absoluteY="54dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071"
         tools:srcCompat="@mipmap/ic_launcher_round" />
 
     <TextView
         android:id="@+id/txtTitle2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/alata"
         android:text="Bienvenido, manager a Intelli Inc."
         android:textSize="24sp"
         tools:layout_editor_absoluteX="22dp"
@@ -31,7 +32,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:fontFamily="@font/alata"
         android:hint="@string/name"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="96dp"
@@ -42,7 +42,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:fontFamily="@font/alata"
         android:hint="@string/lastN"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="98dp"
@@ -53,7 +52,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:fontFamily="@font/alata"
         android:hint="@string/email"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="100dp"
@@ -64,7 +62,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:fontFamily="@font/alata"
         android:hint="@string/password"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="100dp"
