@@ -36,4 +36,10 @@ public class newBlog extends AppCompatActivity {
 
     }
 
+    private void insertar(){
+        String sTitulo=titulo.getText().toString().trim();
+        String sContenido=titulo.getText().toString().trim();
+        
+    }
+
 }

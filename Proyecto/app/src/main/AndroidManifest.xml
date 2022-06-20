@@ -13,6 +13,10 @@
         android:theme="@style/SideBarTheme">
         <activity
             android:name=".BlogActivity"
+            android:name=".myBlogs"
+            android:exported="false" />
+        <activity
+            android:name=".newBlog"
             android:exported="false" />
         <activity
             android:name=".BanActivity"
