@@ -89,24 +89,30 @@ public class BlogActivity extends AppCompatActivity {
         Intent intent;
 
         switch(menuItem.getItemId()) {
-            case R.id.navWelcomeActivity:
-                intent = new Intent(BlogActivity.this, WelcomeActivity.class);
+            case R.id.navMyBlogs: //As test
+                intent = new Intent(BlogActivity.this, MainActivity.class); //Here goes myBlogsActivity
                 startActivity(intent);
                 break;
 
-            case R.id.navMyBlogs:
-                intent = new Intent(BlogActivity.this, MyBlogsActivity.class);
+            case R.id.navSearchBlogs:
+                /*
+                intent = new Intent(MainActivity.this, WelcomeMain.class); //Here goes searchBlogsActivity
                 startActivity(intent);
+                */
                 break;
 
             case R.id.navDenyAccess:
-                intent = new Intent(BlogActivity.this, BanActivity.class);
+                /*
+                intent = new Intent(MainActivity.this, WelcomeMain.class); //Here goes denyAccessActivity
                 startActivity(intent);
+                */
                 break;
 
             case R.id.navLogout:
-                intent = new Intent(BlogActivity.this, MainActivity.class); //Here goes logoutActivity
+                /*
+                intent = new Intent(MainActivity.this, WelcomeMain.class); //Here goes logoutActivity
                 startActivity(intent);
+                */
                 break;
         }
 
