@@ -50,11 +50,9 @@ create table respuesta (
     id_administrador smallint not null,
     tipo_usuario bit not null, -- 0 => cliente || 1 => administrador
     respuesta varchar(500),
-    id_pregunta int,
     primary key(id),
     FOREIGN KEY (id_cliente) REFERENCES cliente(id),
-    FOREIGN KEY (id_administrador) REFERENCES administrador(id),
-    FOREIGN KEY (id_pregunta) REFERENCES pregunta(id)
+    FOREIGN KEY (id_administrador) REFERENCES administrador(id)
 );
 
 create table calificacion_pregunta (
