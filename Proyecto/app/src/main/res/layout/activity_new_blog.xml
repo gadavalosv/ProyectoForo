@@ -34,8 +34,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
         android:ems="10"
+        android:hint="titulo"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintTop_toBottomOf="@+id/nuevoBlog"
         tools:layout_editor_absoluteX="28dp" />
 
@@ -45,8 +45,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:ems="10"
+        android:hint="contenido"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintTop_toBottomOf="@+id/tituloNewBlog"
         tools:layout_editor_absoluteX="28dp" />
 

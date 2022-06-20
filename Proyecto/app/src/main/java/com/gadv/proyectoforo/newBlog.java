@@ -62,7 +62,7 @@ public class newBlog extends AppCompatActivity {
 
 
                 } else {
-                    Toast.makeText(newBlog.this, "No se hizo la coneccion", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(newBlog.this, "Datos insertados", Toast.LENGTH_SHORT).show();
                 }
 
             }
