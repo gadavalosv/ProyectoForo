@@ -15,7 +15,7 @@
             android:name=".myBlogs"
             android:exported="false" />
         <activity
-            android:name=".newBlog"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".blog"
@@ -33,7 +33,7 @@
             android:name=".WelcomeMain"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".newBlog"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

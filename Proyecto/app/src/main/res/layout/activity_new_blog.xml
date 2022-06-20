@@ -16,33 +16,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/contenidoNewBlog"
-        android:layout_width="213dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="40dp"
-        android:text="@string/contenidoNewBlog"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tituloNewBlog" />
-
     <Button
         android:id="@+id/subirBlog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="212dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="120dp"
         android:text="@string/subirBlog"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contenidoNewBlog" />
 
-    <TextView
+    <EditText
         android:id="@+id/tituloNewBlog"
-        android:layout_width="202dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="68dp"
-        android:text="@string/tituloNewBlog"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nuevoBlog" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintTop_toBottomOf="@+id/nuevoBlog"
+        tools:layout_editor_absoluteX="28dp" />
+
+    <EditText
+        android:id="@+id/contenidoNewBlog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintTop_toBottomOf="@+id/tituloNewBlog"
+        tools:layout_editor_absoluteX="28dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
