@@ -15,16 +15,18 @@ import com.google.android.material.navigation.NavigationView;
 
 import java.util.Objects;
 
-public class BanActivity extends AppCompatActivity {
+public class WelcomeActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
     private ActionBarDrawerToggle drawerToggle;
+    private NavigationView navigationView;
+    int userType = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ban);
+        setContentView(R.layout.activity_welcome);
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -38,8 +40,16 @@ public class BanActivity extends AppCompatActivity {
 
         drawerLayout.addDrawerListener(drawerToggle);
 
-        NavigationView navigationView = findViewById(R.id.nvView);
+        navigationView = findViewById(R.id.nvView);
+        selectNavigationView(userType);
         setupDrawerContent(navigationView);
+    }
+
+    private void selectNavigationView(int uT){
+        navigationView.getMenu().clear();
+
+        if(uT == 0) navigationView.inflateMenu(R.menu.navigation_menu);
+        else navigationView.inflateMenu(R.menu.navigation_menu_two);
     }
 
     @Override
@@ -68,7 +78,7 @@ public class BanActivity extends AppCompatActivity {
 
         switch(menuItem.getItemId()) {
             case R.id.navMyBlogs: //As test
-                intent = new Intent(BanActivity.this, MainActivity.class); //Here goes myBlogsActivity
+                intent = new Intent(WelcomeActivity.this, MainActivity.class); //Here goes myBlogsActivity
                 startActivity(intent);
                 break;
 

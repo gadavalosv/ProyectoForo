@@ -20,6 +20,8 @@ public class BlogActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
     private ActionBarDrawerToggle drawerToggle;
+    private NavigationView navigationView;
+    int userType = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +40,16 @@ public class BlogActivity extends AppCompatActivity {
 
         drawerLayout.addDrawerListener(drawerToggle);
 
-        NavigationView navigationView = findViewById(R.id.nvView);
+        navigationView = findViewById(R.id.nvView);
+        selectNavigationView(userType);
         setupDrawerContent(navigationView);
+    }
+
+    private void selectNavigationView(int uT){
+        navigationView.getMenu().clear();
+
+        if(uT == 0) navigationView.inflateMenu(R.menu.navigation_menu);
+        else navigationView.inflateMenu(R.menu.navigation_menu_two);
     }
 
     @Override
@@ -71,12 +81,21 @@ public class BlogActivity extends AppCompatActivity {
                 intent = new Intent(BlogActivity.this, MainActivity.class); //Here goes myBlogsActivity
                 startActivity(intent);
                 break;
+
             case R.id.navSearchBlogs:
                 /*
                 intent = new Intent(MainActivity.this, WelcomeMain.class); //Here goes searchBlogsActivity
                 startActivity(intent);
                 */
                 break;
+
+            case R.id.navDenyAccess:
+                /*
+                intent = new Intent(MainActivity.this, WelcomeMain.class); //Here goes denyAccessActivity
+                startActivity(intent);
+                */
+                break;
+
             case R.id.navLogout:
                 /*
                 intent = new Intent(MainActivity.this, WelcomeMain.class); //Here goes logoutActivity
