@@ -10,12 +10,18 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.Objects;
 
 public class MyBlogsActivity extends AppCompatActivity {
+
+    Intent intent;
+    Button buttonNewBlog;
 
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
@@ -27,6 +33,9 @@ public class MyBlogsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_blogs);
+
+        buttonNewBlog = findViewById(R.id.crearForo);
+        buttonNewBlog.setOnClickListener(view -> newBlog());
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -43,6 +52,11 @@ public class MyBlogsActivity extends AppCompatActivity {
         navigationView = findViewById(R.id.nvView);
         selectNavigationView(userType);
         setupDrawerContent(navigationView);
+    }
+
+    private void newBlog(){
+        intent = new Intent(MyBlogsActivity.this, NewBlogActivity.class);
+        startActivity(intent);
     }
 
     private void selectNavigationView(int uT){
@@ -74,33 +88,25 @@ public class MyBlogsActivity extends AppCompatActivity {
 
     @SuppressLint("NonConstantResourceId")
     public void selectDrawerItem(MenuItem menuItem) {
-        Intent intent;
 
         switch(menuItem.getItemId()) {
-            case R.id.navMyBlogs: //As test
-                intent = new Intent(MyBlogsActivity.this, MainActivity.class); //Here goes myBlogsActivity
+            case R.id.navWelcomeActivity:
+                intent = new Intent(MyBlogsActivity.this, WelcomeActivity.class);
                 startActivity(intent);
                 break;
 
-            case R.id.navSearchBlogs:
-                /*
-                intent = new Intent(MainActivity.this, WelcomeMain.class); //Here goes searchBlogsActivity
-                startActivity(intent);
-                */
+            case R.id.navMyBlogs:
+                Toast.makeText(getApplicationContext(), "Ya se encuentra en la pestaña mis blogs!", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.navDenyAccess:
-                /*
-                intent = new Intent(MainActivity.this, WelcomeMain.class); //Here goes denyAccessActivity
+                intent = new Intent(MyBlogsActivity.this, BanActivity.class);
                 startActivity(intent);
-                */
                 break;
 
             case R.id.navLogout:
-                /*
-                intent = new Intent(MainActivity.this, WelcomeMain.class); //Here goes logoutActivity
+                intent = new Intent(MyBlogsActivity.this, MainActivity.class); //Here goes logoutActivity
                 startActivity(intent);
-                */
                 break;
         }
 
