@@ -18,79 +18,36 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/contenidoNewBlog"
-        android:layout_width="213dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="40dp"
-        android:text="@string/contenidoNewBlog"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tituloNewBlog" />
-
     <Button
         android:id="@+id/subirBlog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="212dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="120dp"
         android:text="@string/subirBlog"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contenidoNewBlog" />
 
-    <TextView
+    <EditText
         android:id="@+id/tituloNewBlog"
-        android:layout_width="202dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="68dp"
-        android:text="@string/tituloNewBlog"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nuevoBlog" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintTop_toBottomOf="@+id/nuevoBlog"
+        tools:layout_editor_absoluteX="28dp" />
 
-    <!-- This DrawerLayout has two children at the root  -->
-    <androidx.drawerlayout.widget.DrawerLayout
-        android:id="@+id/drawer_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <!-- This LinearLayout represents the contents of the screen  -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <!-- The ActionBar displayed at the top -->
-            <include
-                layout="@layout/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <!-- The main content view where fragments are loaded -->
-            <FrameLayout
-                android:id="@+id/flContent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-        </LinearLayout>
-
-        <!-- The navigation drawer that comes from the left -->
-        <!-- Note that `android:layout_gravity` needs to be set to 'start' -->
-        <com.google.android.material.navigation.NavigationView
-            android:id="@+id/nvView"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:fitsSystemWindows="true"
-            android:background="@android:color/white"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:headerLayout="@layout/navigation_header"
-            app:menu="@menu/navigation_menu" />
-    </androidx.drawerlayout.widget.DrawerLayout>
+    <EditText
+        android:id="@+id/contenidoNewBlog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintTop_toBottomOf="@+id/tituloNewBlog"
+        tools:layout_editor_absoluteX="28dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
