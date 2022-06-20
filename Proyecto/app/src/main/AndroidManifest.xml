@@ -9,27 +9,24 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ProyectoForo">
-        <activity
-            android:name=".newBlog"
-            android:exported="false" />
-        <activity
-            android:name=".blog"
-            android:exported="false" />
+        android:theme="@style/SideBarTheme">
         <activity
             android:name=".BlogActivity"
             android:exported="false" />
         <activity
-            android:name=".WelcomeMain"
+            android:name=".BanActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterMain"
+            android:name=".NewBlogActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".BanActivity"
+            android:name=".WelcomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
