@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -11,8 +12,10 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.gadv.proyectoforo.classes.Respuesta;
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class BlogActivity extends AppCompatActivity {
@@ -22,11 +25,20 @@ public class BlogActivity extends AppCompatActivity {
     private ActionBarDrawerToggle drawerToggle;
     private NavigationView navigationView;
     int userType = 0;
+    private RecyclerView recyclerView;
+    ArrayList<Respuesta> listaRespuestas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blog);
+
+        recyclerView = findViewById(R.id.rvRespuestas);
+        listaRespuestas = new ArrayList<>();
+        int idForo = getIntent().getIntExtra("idForo", 0);
+        
+        RespuestaAdapter respuestaAdapter = new RespuestaAdapter(listaRespuestas);
+        recyclerView.setAdapter(respuestaAdapter);
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
