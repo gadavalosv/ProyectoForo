@@ -22,11 +22,31 @@
     <!--navigation_menu (sidebar)-->
     <string name="myBlogs">Mis foros</string>
     <string name="searchBlogs">Buscar foros</string>
-        <!--Only for admin-->
-        <string name="denyAccess">Restringir acceso</string>
+    <!--Only for admin-->
+    <string name="denyAccess">Restringir acceso</string>
     <string name="logout">Cerrar sesión </string>
 
     <!--hamburguer icon-->
     <string name="drawer_open">Abrir sidebar</string>
     <string name="drawer_close">Cerrar sidebar</string>
+
+
+    <!--Blog-->
+    <string name="tituloBolg">BLOG</string>
+    <string name="contenidoBlog">Contenido del Foro</string>
+    <string name="seccionComentarios">Seccion de comentarios</string>
+    <string name="dejarComentario">Dejar un comentario</string>
+    <string name="reportarUsuario">Reportar Usuario</string>
+    <string name="comentar">Comentar</string>
+
+    <!--New Blog-->
+    <string name="nuevoBlog">Nuevo Foro</string>
+    <string name="tituloNewBlog">Escribe El Titulo Del Blog</string>
+    <string name="contenidoNewBlog">Contenido Del Foro</string>
+    <string name="subirBlog">Subir Foro</string>
+
+
+    <string name="ip">https://gadvnautica.000webhostapp.com/</string>
+
+
 </resources>
