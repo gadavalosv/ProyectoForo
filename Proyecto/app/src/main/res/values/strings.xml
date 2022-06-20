@@ -54,7 +54,9 @@
     <string name="subirBlog">Subir Foro</string>
 
 
-    <string name="ip">https://gadvnautica.000webhostapp.com/</string>
+
+
+    <string name="ip">https://gadvnautica.000webhostapp.com/pregunta.php</string>
 
 
 </resources>
