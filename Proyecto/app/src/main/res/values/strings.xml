@@ -3,6 +3,17 @@
     <string name="app_name">ProyectoForo</string>
     <string name="mssg1">Bienvenido a Intelli Inc.</string>
 
+    <!--navigation_menu (sidebar)-->
+    <string name="myBlogs">Mis foros</string>
+    <string name="searchBlogs">Buscar foros</string>
+    <!--Only for admin-->
+    <string name="denyAccess">Restringir acceso</string>
+    <string name="logout">Cerrar sesión </string>
+
+    <!--hamburguer icon-->
+    <string name="drawer_open">Abrir sidebar</string>
+    <string name="drawer_close">Cerrar sidebar</string>
+
     <!--    Activity Register    -->
     <string name="email">Correo electrónico</string>
     <string name="password">Contraseña</string>
@@ -28,19 +39,7 @@
     <string name="btnQuitarReporte">Quitar reporte</string>
     <string name="btnBloquear">Bloquear</string>
 
-    <!--navigation_menu (sidebar)-->
-    <string name="myBlogs">Mis foros</string>
-    <string name="searchBlogs">Buscar foros</string>
-    <!--Only for admin-->
-    <string name="denyAccess">Restringir acceso</string>
-    <string name="logout">Cerrar sesión </string>
-
-    <!--hamburguer icon-->
-    <string name="drawer_open">Abrir sidebar</string>
-    <string name="drawer_close">Cerrar sidebar</string>
-
-
-    <!--Blog-->
+    <!--    Activity Blog    -->
     <string name="tituloBolg">BLOG</string>
     <string name="contenidoBlog">Contenido del Foro</string>
     <string name="seccionComentarios">Seccion de comentarios</string>
@@ -48,7 +47,7 @@
     <string name="reportarUsuario">Reportar Usuario</string>
     <string name="comentar">Comentar</string>
 
-    <!--New Blog-->
+    <!--    Activity New Blog    -->
     <string name="nuevoBlog">Nuevo Foro</string>
     <string name="tituloNewBlog">Escribe El Titulo Del Blog</string>
     <string name="contenidoNewBlog">Contenido Del Foro</string>
