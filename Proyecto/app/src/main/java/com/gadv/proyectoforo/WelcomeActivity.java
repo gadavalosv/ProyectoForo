@@ -16,16 +16,18 @@ import com.google.android.material.navigation.NavigationView;
 
 import java.util.Objects;
 
-public class BanActivity extends AppCompatActivity {
+public class WelcomeActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
     private ActionBarDrawerToggle drawerToggle;
+    private NavigationView navigationView;
+    int userType = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ban);
+        setContentView(R.layout.activity_welcome);
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -39,8 +41,16 @@ public class BanActivity extends AppCompatActivity {
 
         drawerLayout.addDrawerListener(drawerToggle);
 
-        NavigationView navigationView = findViewById(R.id.nvView);
+        navigationView = findViewById(R.id.nvView);
+        selectNavigationView(userType);
         setupDrawerContent(navigationView);
+    }
+
+    private void selectNavigationView(int uT){
+        navigationView.getMenu().clear();
+
+        if(uT == 0) navigationView.inflateMenu(R.menu.navigation_menu);
+        else navigationView.inflateMenu(R.menu.navigation_menu_two);
     }
 
     @Override
@@ -69,21 +79,21 @@ public class BanActivity extends AppCompatActivity {
 
         switch(menuItem.getItemId()) {
             case R.id.navWelcomeActivity:
-                intent = new Intent(BanActivity.this, WelcomeActivity.class);
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(), "Ya se encuentra en la pestaña de bienvenida!", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.navMyBlogs:
-                intent = new Intent(BanActivity.this, MyBlogsActivity.class);
+                intent = new Intent(WelcomeActivity.this, MyBlogsActivity.class);
                 startActivity(intent);
                 break;
 
             case R.id.navDenyAccess:
-                Toast.makeText(getApplicationContext(), "Ya se encuentra en la pestaña restringir acceso!", Toast.LENGTH_SHORT).show();
+                intent = new Intent(WelcomeActivity.this, BanActivity.class);
+                startActivity(intent);
                 break;
 
             case R.id.navLogout:
-                intent = new Intent(BanActivity.this, MainActivity.class); //Here goes logoutActivity
+                intent = new Intent(WelcomeActivity.this, MainActivity.class); //Here goes logoutActivity
                 startActivity(intent);
                 break;
         }

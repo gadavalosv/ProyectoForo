@@ -10,24 +10,24 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ProyectoForo">
+        android:theme="@style/Theme.AppCompat.Light">
         <activity
-            android:name=".myBlogs"
+            android:name=".BanActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".blog"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".BanActivity"
+            android:name=".WelcomeActivity"
             android:exported="false" />
         <activity
-            android:name=".BlogActivity"
+            android:name=".NewBlogActivity"
             android:exported="false" />
         <activity
-            android:name=".ManagerMain"
+            android:name=".RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".WelcomeMain"

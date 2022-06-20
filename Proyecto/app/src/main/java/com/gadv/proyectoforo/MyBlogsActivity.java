@@ -10,22 +10,32 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.Objects;
 
-public class BanActivity extends AppCompatActivity {
+public class MyBlogsActivity extends AppCompatActivity {
+
+    Intent intent;
+    Button buttonNewBlog;
 
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
     private ActionBarDrawerToggle drawerToggle;
+    private NavigationView navigationView;
+    int userType = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ban);
+        setContentView(R.layout.activity_my_blogs);
+
+        buttonNewBlog = findViewById(R.id.crearForo);
+        buttonNewBlog.setOnClickListener(view -> newBlog());
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -39,8 +49,21 @@ public class BanActivity extends AppCompatActivity {
 
         drawerLayout.addDrawerListener(drawerToggle);
 
-        NavigationView navigationView = findViewById(R.id.nvView);
+        navigationView = findViewById(R.id.nvView);
+        selectNavigationView(userType);
         setupDrawerContent(navigationView);
+    }
+
+    private void newBlog(){
+        intent = new Intent(MyBlogsActivity.this, NewBlogActivity.class);
+        startActivity(intent);
+    }
+
+    private void selectNavigationView(int uT){
+        navigationView.getMenu().clear();
+
+        if(uT == 0) navigationView.inflateMenu(R.menu.navigation_menu);
+        else navigationView.inflateMenu(R.menu.navigation_menu_two);
     }
 
     @Override
@@ -65,25 +88,24 @@ public class BanActivity extends AppCompatActivity {
 
     @SuppressLint("NonConstantResourceId")
     public void selectDrawerItem(MenuItem menuItem) {
-        Intent intent;
 
         switch(menuItem.getItemId()) {
             case R.id.navWelcomeActivity:
-                intent = new Intent(BanActivity.this, WelcomeActivity.class);
+                intent = new Intent(MyBlogsActivity.this, WelcomeActivity.class);
                 startActivity(intent);
                 break;
 
             case R.id.navMyBlogs:
-                intent = new Intent(BanActivity.this, MyBlogsActivity.class);
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(), "Ya se encuentra en la pestaña mis blogs!", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.navDenyAccess:
-                Toast.makeText(getApplicationContext(), "Ya se encuentra en la pestaña restringir acceso!", Toast.LENGTH_SHORT).show();
+                intent = new Intent(MyBlogsActivity.this, BanActivity.class);
+                startActivity(intent);
                 break;
 
             case R.id.navLogout:
-                intent = new Intent(BanActivity.this, MainActivity.class); //Here goes logoutActivity
+                intent = new Intent(MyBlogsActivity.this, MainActivity.class); //Here goes logoutActivity
                 startActivity(intent);
                 break;
         }

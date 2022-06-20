@@ -4,15 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".newBlog">
+    android:background="@color/white"
+    tools:context=".NewBlogActivity">
 
     <TextView
         android:id="@+id/nuevoBlog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="100dp"
         android:text="@string/nuevoBlog"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,8 +34,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
         android:ems="10"
+        android:hint="titulo"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintTop_toBottomOf="@+id/nuevoBlog"
         tools:layout_editor_absoluteX="28dp" />
 
@@ -43,8 +45,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:ems="10"
+        android:hint="contenido"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintTop_toBottomOf="@+id/tituloNewBlog"
         tools:layout_editor_absoluteX="28dp" />
 
