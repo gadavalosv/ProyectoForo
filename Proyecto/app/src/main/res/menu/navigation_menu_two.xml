@@ -2,13 +2,13 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/navWelcomeActivity"
+            android:icon="@drawable/ic_baseline_cloud_queue_24"
+            android:title="@string/welcomeActivity" />
+        <item
             android:id="@+id/navMyBlogs"
             android:icon="@drawable/ic_baseline_cloud_queue_24"
             android:title="@string/myBlogs" />
-        <item
-            android:id="@+id/navSearchBlogs"
-            android:icon="@drawable/ic_baseline_cloud_queue_24"
-            android:title="@string/searchBlogs" />
         <item
             android:id="@+id/navDenyAccess"
             android:icon="@drawable/ic_baseline_cloud_queue_24"

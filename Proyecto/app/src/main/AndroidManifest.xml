@@ -15,7 +15,7 @@
             android:name=".BanActivity"
             android:exported="false" />
         <activity
-            android:name=".BlogActivity"
+            android:name=".MyBlogsActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
@@ -30,7 +30,7 @@
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".MyBlogsActivity"
+            android:name=".BlogActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
