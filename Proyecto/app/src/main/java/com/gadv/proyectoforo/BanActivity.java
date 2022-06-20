@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -67,30 +68,23 @@ public class BanActivity extends AppCompatActivity {
         Intent intent;
 
         switch(menuItem.getItemId()) {
-            case R.id.navMyBlogs: //As test
-                intent = new Intent(BanActivity.this, MainActivity.class); //Here goes myBlogsActivity
+            case R.id.navWelcomeActivity:
+                intent = new Intent(BanActivity.this, WelcomeActivity.class);
                 startActivity(intent);
                 break;
 
-            case R.id.navSearchBlogs:
-                /*
-                intent = new Intent(MainActivity.this, WelcomeMain.class); //Here goes searchBlogsActivity
+            case R.id.navMyBlogs:
+                intent = new Intent(BanActivity.this, MyBlogsActivity.class);
                 startActivity(intent);
-                */
                 break;
 
             case R.id.navDenyAccess:
-                /*
-                intent = new Intent(MainActivity.this, WelcomeMain.class); //Here goes denyAccessActivity
-                startActivity(intent);
-                */
+                Toast.makeText(getApplicationContext(), "Ya se encuentra en la pestaña restringir acceso!", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.navLogout:
-                /*
-                intent = new Intent(MainActivity.this, WelcomeMain.class); //Here goes logoutActivity
+                intent = new Intent(BanActivity.this, MainActivity.class); //Here goes logoutActivity
                 startActivity(intent);
-                */
                 break;
         }
 

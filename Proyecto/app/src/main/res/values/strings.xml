@@ -1,11 +1,10 @@
 <resources>
-    <!--    General    -->
     <string name="app_name">ProyectoForo</string>
     <string name="mssg1">Bienvenido a Intelli Inc.</string>
 
     <!--navigation_menu (sidebar)-->
+    <string name="welcomeActivity">Inicio</string>
     <string name="myBlogs">Mis foros</string>
-    <string name="searchBlogs">Buscar foros</string>
     <!--Only for admin-->
     <string name="denyAccess">Restringir acceso</string>
     <string name="logout">Cerrar sesión </string>
@@ -29,11 +28,6 @@
     <string name="edtPregunta">Contenido del foro</string>
     <string name="btnReportar">Reportar Usuario</string>
 
-    <string name="tvNombreUsuario">Nombre Usuario</string>
-    <string name="tvCalificacion">Calificación:</string>
-    <string name="tvEstrellas">Estrellas</string>
-    <string name="tvNombrePublicador">Nombre Usuario</string>
-
     <!--    Activity Ban    -->
     <string name="tvTituloBan">Usuarios Reportados</string>
     <string name="btnQuitarReporte">Quitar reporte</string>
@@ -53,6 +47,13 @@
     <string name="contenidoNewBlog">Contenido Del Foro</string>
     <string name="subirBlog">Subir Foro</string>
 
+    <!--    Activity My Blogs    -->
+    <string name="misBlog">Mis Blogs</string>
+    <string name="buscarForo">Buscar Foro</string>
+    <string name="pregunta1">Pregunta 1</string>
+    <string name="temaInteres1">Tema de interes</string>
+    <string name="duda2">Duda 2</string>
+    <string name="crearForo">Crear foro</string>
 
 
 
