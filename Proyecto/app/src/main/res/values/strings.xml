@@ -1,5 +1,9 @@
 <resources>
+    <!--    General    -->
     <string name="app_name">ProyectoForo</string>
+    <string name="mssg1">Bienvenido a Intelli Inc.</string>
+
+    <!--    Activity Register    -->
     <string name="email">Correo electrónico</string>
     <string name="password">Contraseña</string>
     <string name="login">Entrar</string>
