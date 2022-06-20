@@ -12,14 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/SideBarTheme">
         <activity
-            android:name=".BlogActivity"
-            android:name=".myBlogs"
-            android:exported="false" />
-        <activity
-            android:name=".newBlog"
-            android:exported="false" />
-        <activity
             android:name=".BanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BlogActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomeActivity"
             android:exported="false" />
         <activity
             android:name=".NewBlogActivity"
@@ -28,10 +30,7 @@
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".WelcomeActivity"
+            android:name=".MyBlogsActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
