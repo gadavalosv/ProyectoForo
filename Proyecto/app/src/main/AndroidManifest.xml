@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/SideBarTheme">
         <activity
+            android:name=".BanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BlogActivity"
+            android:exported="false" />
+        <activity
             android:name=".ManagerMain"
             android:exported="false" />
         <activity
