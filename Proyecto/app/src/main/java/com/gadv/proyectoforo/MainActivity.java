@@ -7,6 +7,8 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -21,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
-    private NavigationView navigationView;
     private ActionBarDrawerToggle drawerToggle;
 
     @Override
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         drawerLayout.addDrawerListener(drawerToggle);
 
-        navigationView = findViewById(R.id.nvView);
+        NavigationView navigationView = findViewById(R.id.nvView);
         setupDrawerContent(navigationView);
     }
 
@@ -65,20 +66,27 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
+    @SuppressLint("NonConstantResourceId")
     public void selectDrawerItem(MenuItem menuItem) {
+        Intent intent;
 
         switch(menuItem.getItemId()) {
-            case R.id.nav_first_fragment:
-                //fragmentClass = FirstFragment.class;
+            case R.id.navMyBlogs: //As test
+                intent = new Intent(MainActivity.this, WelcomeMain.class); //Here goes myBlogsActivity
+                startActivity(intent);
                 break;
-            case R.id.nav_second_fragment:
-                //fragmentClass = SecondFragment.class;
+            case R.id.navSearchBlogs:
+                /*
+                intent = new Intent(MainActivity.this, WelcomeMain.class); //Here goes searchBlogsActivity
+                startActivity(intent);
+                */
                 break;
-            case R.id.nav_third_fragment:
-                //fragmentClass = ThirdFragment.class;
+            case R.id.navLogout:
+                /*
+                intent = new Intent(MainActivity.this, WelcomeMain.class); //Here goes logoutActivity
+                startActivity(intent);
+                */
                 break;
-            default:
-                //fragmentClass = FirstFragment.class;
         }
 
         menuItem.setChecked(true);
