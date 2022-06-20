@@ -16,6 +16,12 @@
             android:name=".BlogActivity"
             android:exported="false" />
         <activity
+            android:name=".ManagerMain"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomeMain"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
