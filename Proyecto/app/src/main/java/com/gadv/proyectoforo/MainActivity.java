@@ -2,14 +2,16 @@ package com.gadv.proyectoforo;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.widget.Toolbar;
+
 
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -57,10 +59,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupDrawerContent(NavigationView navigationView){
         navigationView.setNavigationItemSelectedListener(
-            menuItem -> {
-                selectDrawerItem(menuItem);
-                return true;
-            });
+                menuItem -> {
+                    selectDrawerItem(menuItem);
+                    return true;
+                });
     }
 
     public void selectDrawerItem(MenuItem menuItem) {

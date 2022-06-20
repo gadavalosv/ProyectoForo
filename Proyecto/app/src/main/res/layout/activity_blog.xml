@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".blog">
+
+    <TextView
+        android:id="@+id/tituloBolg"
+        android:layout_width="64dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/tituloBolg"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="147dp" />
+
+    <TextView
+        android:id="@+id/contenidoBlog"
+        android:layout_width="229dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/contenidoBlog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloBolg" />
+
+    <TextView
+        android:id="@+id/seccionComentarios"
+        android:layout_width="232dp"
+        android:layout_height="164dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/seccionComentarios"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contenidoBlog" />
+
+    <Button
+        android:id="@+id/reportarUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/reportarUsuario"
+        app:layout_constraintStart_toEndOf="@+id/comentar"
+        app:layout_constraintTop_toBottomOf="@+id/dejarComentario" />
+
+    <EditText
+        android:id="@+id/dejarComentario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="@string/dejarComentario"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/seccionComentarios"
+        tools:layout_editor_absoluteX="56dp" />
+
+    <Button
+        android:id="@+id/comentar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/comentar"
+        app:layout_constraintTop_toBottomOf="@+id/dejarComentario"
+        tools:layout_editor_absoluteX="56dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
