@@ -90,7 +90,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             app:headerLayout="@layout/navigation_header"
-            app:menu="@menu/navigation_menu" />
+            app:menu="@menu/navigation_menu_two" />
     </androidx.drawerlayout.widget.DrawerLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
