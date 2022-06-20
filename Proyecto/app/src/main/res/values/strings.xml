@@ -29,6 +29,11 @@
     <string name="edtPregunta">Contenido del foro</string>
     <string name="btnReportar">Reportar Usuario</string>
 
+    <string name="tvNombreUsuario">Nombre Usuario</string>
+    <string name="tvCalificacion">Calificación:</string>
+    <string name="tvEstrellas">Estrellas</string>
+    <string name="tvNombrePublicador">Nombre Usuario</string>
+
     <!--    Activity Ban    -->
     <string name="tvTituloBan">Usuarios Reportados</string>
     <string name="btnQuitarReporte">Quitar reporte</string>

@@ -37,7 +37,8 @@ create table pregunta (
     id_cliente int not null,
     id_administrador smallint not null,
     tipo_usuario bit not null, -- 0 => cliente || 1 => administrador
-    pregunta varchar(200),
+    pregunta varchar(500),
+    titulo varchar(100),
     primary key(id),
     FOREIGN KEY (id_cliente) REFERENCES cliente(id),
     FOREIGN KEY (id_administrador) REFERENCES administrador(id)
