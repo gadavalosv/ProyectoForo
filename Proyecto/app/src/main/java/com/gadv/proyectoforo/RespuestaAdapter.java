@@ -34,7 +34,9 @@ public class RespuestaAdapter extends RecyclerView.Adapter<RespuestaAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull RespuestaAdapter.ViewHolder holder, int position) {
-        //
+        holder.setTvNombreUsuario(respuestaList.get(position).getNombreUsuario());
+        holder.setTvRespuesta(respuestaList.get(position).getRespuesta());
+        holder.setTvCalificacionActual(String.valueOf(respuestaList.get(position).getCalificacion()));
     }
 
     @Override
@@ -49,9 +51,25 @@ public class RespuestaAdapter extends RecyclerView.Adapter<RespuestaAdapter.View
         private EditText txtCalificacion;
         private Button btnCalificar;
 
-
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            tvNombreUsuario = itemView.findViewById(R.id.tvNombreUsuario);
+            tvRespuesta = itemView.findViewById(R.id.tvRespuesta);
+            tvCalificacionActual = itemView.findViewById(R.id.tvCalificacionActual);
+            txtCalificacion = itemView.findViewById(R.id.txtCalificacion);
+            btnCalificar = itemView.findViewById(R.id.btnCalificar);
+        }
+
+        public void setTvNombreUsuario(String nombreUsuario) {
+            this.tvNombreUsuario.setText(nombreUsuario);
+        }
+
+        public void setTvRespuesta(String respuesta) {
+            this.tvRespuesta.setText(respuesta);
+        }
+
+        public void setTvCalificacionActual(String calificacionActual) {
+            this.tvCalificacionActual.setText(calificacionActual);
         }
     }
 }

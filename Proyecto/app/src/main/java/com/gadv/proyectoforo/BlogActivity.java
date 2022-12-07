@@ -1,6 +1,8 @@
 package com.gadv.proyectoforo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -8,13 +10,39 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;
+import com.gadv.proyectoforo.classes.Respuesta;
+
+import org.json.JSONArray;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class BlogActivity extends AppCompatActivity {
     int userType = 1;
+
+    private RecyclerView rvRespuestas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blog);
+
+        rvRespuestas = findViewById(R.id.rvRespuestas);
+
+        rvRespuestas.setLayoutManager(new LinearLayoutManager(this));
+
+        volleyGet();
+    }
+
+    private void volleyGet() {
+        String url=getString(R.string.ip)+"preguntas.php";
+        List<Respuesta> jsonRespuestas = new ArrayList<>();
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        JSONArray jsonArray = new JSONArray(Request.Method.GET);
     }
 
     public boolean onCreateOptionsMenu(Menu menu){
