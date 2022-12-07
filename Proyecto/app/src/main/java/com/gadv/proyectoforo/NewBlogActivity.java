@@ -47,6 +47,11 @@ public class NewBlogActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
 
+            case R.id.navTakePicture:
+                intent = new Intent(NewBlogActivity.this, TakeCamera.class);
+                startActivity(intent);
+                break;
+
             case R.id.navLogout:
                 intent = new Intent(NewBlogActivity.this, MainActivity.class);
                 startActivity(intent);

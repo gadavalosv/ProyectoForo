@@ -18,26 +18,14 @@
             android:name=".TakeCamera"
             android:exported="false" />
         <activity
-            android:name=".CamaraActivity"
-            android:exported="false" />
-        <activity
             android:name=".multimedia"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".BanActivity"
             android:exported="false" />
         <activity
             android:name=".BlogActivity"
             android:exported="false" />
-        <!--
-<activity
-            android:name=".MainActivity"
-            android:exported="false" />!
-        -->
+        <activity
+            android:name=".BanActivity"
+            android:exported="false" />
         <activity
             android:name=".MyBlogsActivity"
             android:exported="false" />
