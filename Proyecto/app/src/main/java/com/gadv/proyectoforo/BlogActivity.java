@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -96,5 +97,9 @@ public class BlogActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(menuItem);
+    }public void escuchar(View view){
+        Intent intent = new Intent(BlogActivity.this,multimedia.class);
+        startActivity(intent);
+
     }
 }

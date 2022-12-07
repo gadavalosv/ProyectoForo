@@ -1,39 +1,24 @@
 <?php
-	include('conexion.php');
+	$hostname = 'localhost';
+	$database = 'id19074458_ceti_foro';
+	$username = 'id19074458_foro_root';
+	$password = 'Qfjqa[G36/X)c=W5';
 
-    $c = connectToBD();
+    $c = new mysqli($hostname,$username,$password,$database);
 
-    $query = "SELECT tipo_usuario FROM usuario WHERE correo LIKE 'g%';";
+    if($c->connect_errno){
+		die("El sitio web esta experimentando problemas");
+	}
 
-    try
-    {	
-        if($stmt = $c->prepare($query))
-        {
-            $stmt->execute();
-            $stmt->bind_result($uType);
+    $sql = "SELECT tipo_usuario FROM usuario WHERE correo LIKE 'g%';";
+    $result = $c->query($sql);
 
-            $data = array();
-
-            while($stmt->fetch())
-            {
-                $temp = [
-                        'userType' => $uType
-                ];
-
-                array_push($data, $temp);
-            }
-
-            return json_encode(array('data' => $data));
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+          echo "user_type: " . $row["tipo_usuario"]. "<br>";
         }
-        else
-        {
-            echo "Error in the query";
-        }
-
-        $c->close();
+    } else {
+        echo "0 results";
     }
-    catch(Exception $e)
-    {
-        return "Exception: " . $e->getMessage();
-    }
+    $conn->close();
 ?>
