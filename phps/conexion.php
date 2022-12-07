@@ -1,4 +1,4 @@
-<?PHP
+<?php
 
 $hostname = 'localhost';
 $database = 'id19074458_ceti_foro';
