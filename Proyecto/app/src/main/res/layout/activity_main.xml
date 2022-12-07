@@ -73,6 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:backgroundTint="#094173"
+        android:onClick="access"
         android:text="@string/login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

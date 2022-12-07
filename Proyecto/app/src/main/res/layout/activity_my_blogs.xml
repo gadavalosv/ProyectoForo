@@ -25,10 +25,11 @@
         android:layout_width="155dp"
         android:layout_height="38dp"
         android:layout_marginTop="52dp"
+        android:onClick="blog"
         android:text="@string/buscarForo"
         app:layout_constraintTop_toBottomOf="@+id/misBlogs"
-        tools:layout_editor_absoluteX="67dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="67dp" />
 
     <TextView
         android:id="@+id/pregunta1"

@@ -10,16 +10,12 @@
         <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/font/alata.xml" value="0.14635416666666667" />
         <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/layout/activity_ban.xml" value="0.1" />
         <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/layout/activity_blog.xml" value="0.259375" />
-        <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/layout/activity_camara.xml" value="0.259375" />
         <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/layout/activity_main.xml" value="0.2368659420289855" />
         <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/layout/activity_manager.xml" value="0.4" />
-        <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/layout/activity_multimedia.xml" value="0.259375" />
         <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/layout/activity_my_blog.xml" value="0.11614583333333334" />
-        <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/layout/activity_my_blogs.xml" value="0.2" />
+        <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/layout/activity_my_blogs.xml" value="0.4839650145772595" />
         <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/layout/activity_new_blog.xml" value="0.2" />
-        <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/layout/activity_newblog.xml" value="0.259375" />
         <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/layout/activity_register.xml" value="0.259375" />
-        <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/layout/activity_take_camera.xml" value="0.136" />
         <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/layout/activity_welcome.xml" value="0.11614583333333334" />
         <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/layout/nav_header.xml" value="0.259375" />
         <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/layout/navigation_header.xml" value="0.264" />
@@ -27,13 +23,15 @@
         <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/layout/toolbar.xml" value="0.12563323201621074" />
         <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/menu/admin_menu.xml" value="0.16" />
         <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/menu/navigation_header.xml" value="0.259375" />
-        <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/menu/navigation_menu.xml" value="0.264" />
-        <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/menu/navigation_menu_two.xml" value="1.0" />
+        <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/menu/navigation_menu.xml" value="0.15925925925925927" />
+        <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/menu/navigation_menu_two.xml" value="0.259375" />
         <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/menu/student_menu.xml" value="0.1" />
         <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.127" />
         <entry key="..\:/CETI/Fifth/Mov/ThirdPartial/ProyectoForo/Proyecto/app/src/main/res/mipmap-anydpi-v26/ico-logo1.xml" value="0.1385" />
         <entry key="..\:/Pasar a nueva compu/C.E.T.I/Ingenieria/Programacion de Dispositivos Moviles 2/ProyectoForo/Proyecto/app/src/main/res/layout/activity_ban.xml" value="0.25" />
         <entry key="..\:/Pasar a nueva compu/C.E.T.I/Ingenieria/Programacion de Dispositivos Moviles 2/ProyectoForo/Proyecto/app/src/main/res/layout/activity_blog.xml" value="0.25" />
+        <entry key="..\:/Pasar a nueva compu/C.E.T.I/Ingenieria/Programacion de Dispositivos Moviles 2/ProyectoForo/Proyecto/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Pasar a nueva compu/C.E.T.I/Ingenieria/Programacion de Dispositivos Moviles 2/ProyectoForo/Proyecto/app/src/main/res/layout/activity_my_blogs.xml" value="0.14266304347826086" />
         <entry key="..\:/Pasar a nueva compu/C.E.T.I/Ingenieria/Programacion de Dispositivos Moviles 2/ProyectoForo/Proyecto/app/src/main/res/layout/ban_item.xml" value="0.22" />
         <entry key="..\:/Pasar a nueva compu/C.E.T.I/Ingenieria/Programacion de Dispositivos Moviles 2/ProyectoForo/Proyecto/app/src/main/res/layout/respuesta_item.xml" value="0.33" />
         <entry key="..\:/Users/danie/AndroidStudioProjects/ProyectoFinalMoviles/ProyectoForo/Proyecto/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3675" />
