@@ -6,7 +6,7 @@
     <string name="welcomeActivity">Inicio</string>
     <string name="myBlogs">Mis foros</string>
     <string name="logout">Cerrar sesión </string>
-        <!--Only for admin-->
+    <!--Only for admin-->
     <string name="denyAccess">Restringir acceso</string>
 
     <!--    Activity Register    -->
