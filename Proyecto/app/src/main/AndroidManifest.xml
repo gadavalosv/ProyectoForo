@@ -3,6 +3,9 @@
     package="com.gadv.proyectoforo">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -12,23 +15,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
         <activity
-            android:name=".multimedia"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:name=".TakeCamera"
+            android:exported="false" />
         <activity
-            android:name=".BanActivity"
+            android:name=".multimedia"
             android:exported="false" />
         <activity
             android:name=".BlogActivity"
             android:exported="false" />
-        <!--
-<activity
-            android:name=".MainActivity"
-            android:exported="false" />!
-        -->
+        <activity
+            android:name=".BanActivity"
+            android:exported="false" />
         <activity
             android:name=".MyBlogsActivity"
             android:exported="false" />

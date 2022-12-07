@@ -21,5 +21,4 @@ public class MainActivity extends AppCompatActivity {
         builder.setColor(Color.BLUE);
         builder.setDefaults(Notification.DEFAULT_SOUND);
     }
-
 }
