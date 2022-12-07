@@ -11,42 +11,43 @@
         android:id="@+id/tvTituloBan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="24dp"
         android:text="@string/tvTituloBan"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.548"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvRespuestas"
-        android:layout_width="333dp"
-        android:layout_height="280dp"
-        android:layout_marginTop="24dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTituloBan" />
 
     <Button
         android:id="@+id/btnQuitarReporte"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
+        android:layout_marginStart="44dp"
         android:layout_marginTop="32dp"
         android:text="@string/btnQuitarReporte"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rvRespuestas" />
+        app:layout_constraintTop_toBottomOf="@+id/rvBaneados" />
 
     <Button
         android:id="@+id/btnBloquear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginEnd="52dp"
         android:text="@string/btnBloquear"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rvRespuestas" />
+        app:layout_constraintTop_toBottomOf="@+id/rvBaneados" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBaneados"
+        android:layout_width="333dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="28dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloBan" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
