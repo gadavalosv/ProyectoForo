@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 07-12-2022 a las 05:03:50
+-- Tiempo de generación: 07-12-2022 a las 11:39:12
 -- Versión del servidor: 10.5.16-MariaDB
 -- Versión de PHP: 7.3.32
 
@@ -21,35 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `id19074458_ceti_foro`
 --
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `usuario`
---
-
-CREATE TABLE `usuario` (
-  `id` int(11) NOT NULL,
-  `correo` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
-  `tipo_usuario` int(11) NOT NULL,
-  `contrasenia` varchar(40) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Volcado de datos para la tabla `usuario`
---
-
-INSERT INTO `usuario` (`id`, `tipo_usuario`, `correo`, `contrasenia`) VALUES
-(1, 1, 'gadv390@ceti.mx', 'admin'),
-(2, 0, 'daniela32@ceti.mx', 'pass'),
-(3, 0, 'jorgesalazar@gmail.com', 'pass'),
-(4, 0, 'dan@cignuz.com', 'pass'),
-(5, 0, 'maglez@hotmail.com', 'pass'),
-(6, 0, 'dancav@hotmail.com', 'pass'),
-(7, 0, 'isael@hotmail.com', 'pass'),
-(8, 0, 'canario33@hotmail.com', 'pass'),
-(9, 0, 'cisco32@hotmail.com', 'pass'),
-(10, 0, 'mariana2bon@hotmail.com', 'pass');
 
 -- --------------------------------------------------------
 
@@ -174,15 +145,38 @@ INSERT INTO `respuesta` (`id`, `id_usuario`, `tipo_usuario`, `respuesta`, `id_pr
 (8, 8, b'0', 'Respuesta', 8),
 (9, 9, b'0', 'Respuesta', 9);
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `id` int(11) NOT NULL,
+  `correo` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `tipo_usuario` int(11) NOT NULL,
+  `contrasenia` varchar(40) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id`, `correo`, `tipo_usuario`, `contrasenia`) VALUES
+(1, 'gadv390@ceti.mx', 1, 'admin'),
+(2, 'daniela32@ceti.mx', 0, 'pass'),
+(3, 'jorgesalazar@gmail.com', 0, 'pass'),
+(4, 'dan@cignuz.com', 0, 'pass'),
+(5, 'maglez@hotmail.com', 0, 'pass'),
+(6, 'dancav@hotmail.com', 0, 'pass'),
+(7, 'isael@hotmail.com', 0, 'pass'),
+(8, 'canario33@hotmail.com', 0, 'pass'),
+(9, 'cisco32@hotmail.com', 0, 'pass'),
+(10, 'mariana2bon@hotmail.com', 0, 'pass');
+
 --
 -- Índices para tablas volcadas
 --
-
---
--- Indices de la tabla `usuario`
---
-ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `baneo`
@@ -223,14 +217,14 @@ ALTER TABLE `respuesta`
   ADD KEY `id_pregunta` (`id_pregunta`);
 
 --
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `usuario`
+-- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
 
 --
 -- AUTO_INCREMENT de la tabla `baneo`
@@ -261,6 +255,12 @@ ALTER TABLE `pregunta`
 --
 ALTER TABLE `respuesta`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Restricciones para tablas volcadas
