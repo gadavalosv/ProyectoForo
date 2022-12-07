@@ -1,33 +1,20 @@
 package com.gadv.proyectoforo;
 
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.google.android.material.navigation.NavigationView;
-
-import java.util.Objects;
-
 public class MyBlogsActivity extends AppCompatActivity {
+    int userType = 1;
 
     Intent intent;
     Button buttonNewBlog;
-
-    private DrawerLayout drawerLayout;
-    private Toolbar toolbar;
-    private ActionBarDrawerToggle drawerToggle;
-    private NavigationView navigationView;
-    int userType = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,94 +23,48 @@ public class MyBlogsActivity extends AppCompatActivity {
 
         buttonNewBlog = findViewById(R.id.crearForo);
         buttonNewBlog.setOnClickListener(view -> newBlog());
-
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-
-        drawerLayout = findViewById(R.id.drawer_layout);
-
-        drawerToggle = setupDrawerToggle();
-        drawerToggle.setDrawerIndicatorEnabled(true);
-        drawerToggle.syncState();
-
-        drawerLayout.addDrawerListener(drawerToggle);
-
-        navigationView = findViewById(R.id.nvView);
-        selectNavigationView(userType);
-        setupDrawerContent(navigationView);
     }
 
-    private void newBlog(){
-        intent = new Intent(MyBlogsActivity.this, NewBlogActivity.class);
-        startActivity(intent);
-    }
+    public boolean onCreateOptionsMenu(Menu menu){
+        if(userType == 0) getMenuInflater().inflate(R.menu.navigation_menu, menu);
+        else getMenuInflater().inflate(R.menu.navigation_menu_two, menu);
 
-    private void selectNavigationView(int uT){
-        navigationView.getMenu().clear();
-
-        if(uT == 0) navigationView.inflateMenu(R.menu.navigation_menu);
-        else navigationView.inflateMenu(R.menu.navigation_menu_two);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (drawerToggle.onOptionsItemSelected(item))
-            return true;
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    private ActionBarDrawerToggle setupDrawerToggle() {
-        return new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.drawer_open,  R.string.drawer_close);
-    }
-
-    private void setupDrawerContent(NavigationView navigationView){
-        navigationView.setNavigationItemSelectedListener(
-                menuItem -> {
-                    selectDrawerItem(menuItem);
-                    return true;
-                });
+        return true;
     }
 
     @SuppressLint("NonConstantResourceId")
-    public void selectDrawerItem(MenuItem menuItem) {
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        Intent intent;
+        int id = menuItem.getItemId();
 
-        switch(menuItem.getItemId()) {
+        if (userType == 1) {
+            if (id == R.id.navDenyAccess) {
+                intent = new Intent(MyBlogsActivity.this, BanActivity.class);
+                startActivity(intent);
+            }
+        }
+
+        switch (id) {
             case R.id.navWelcomeActivity:
                 intent = new Intent(MyBlogsActivity.this, WelcomeActivity.class);
                 startActivity(intent);
                 break;
 
             case R.id.navMyBlogs:
-                Toast.makeText(getApplicationContext(), "Ya se encuentra en la pestaña mis blogs!", Toast.LENGTH_SHORT).show();
-                break;
-
-            case R.id.navDenyAccess:
-                intent = new Intent(MyBlogsActivity.this, BanActivity.class);
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(), "Ya te encuentras en la pantalla de Mis blogs!", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.navLogout:
-                intent = new Intent(MyBlogsActivity.this, MainActivity.class); //Here goes logoutActivity
+                intent = new Intent(MyBlogsActivity.this, MainActivity.class);
                 startActivity(intent);
                 break;
         }
 
-        menuItem.setChecked(true);
-        setTitle(menuItem.getTitle());
-        drawerLayout.closeDrawers();
+        return super.onOptionsItemSelected(menuItem);
     }
 
-    @Override
-    protected void onPostCreate(Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-        drawerToggle.syncState();
-    }
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        drawerToggle.onConfigurationChanged(newConfig);
+    private void newBlog(){
+        intent = new Intent(MyBlogsActivity.this, NewBlogActivity.class);
+        startActivity(intent);
     }
 }
