@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".NewBlogActivity">
+
+    <TextView
+        android:id="@+id/nuevoBlog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/nuevoBlog"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/subirBlog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="120dp"
+        android:text="@string/subirBlog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contenidoNewBlog" />
+
+    <EditText
+        android:id="@+id/tituloNewBlog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="112dp"
+        android:ems="10"
+        android:hint="titulo"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/nuevoBlog"
+        tools:layout_editor_absoluteX="28dp" />
+
+    <EditText
+        android:id="@+id/contenidoNewBlog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:ems="10"
+        android:hint="contenido"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/tituloNewBlog"
+        tools:layout_editor_absoluteX="28dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".BlogActivity">
 
     <TextView
         android:id="@+id/tvTituloForo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="100dp"
         android:text="@string/tvTituloForo"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,11 +19,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/tvNombrePublicador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloForo" />
+
     <EditText
         android:id="@+id/edtPregunta"
         android:layout_width="333dp"
         android:layout_height="100dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="@string/edtPregunta"
@@ -31,33 +42,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTituloForo" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvRespuestas"
-        android:layout_width="333dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPregunta" />
-
-    <EditText
-        android:id="@+id/edtComentario"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="@string/edtComentario"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rvRespuestas" />
-
     <Button
         android:id="@+id/btnComentar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         android:text="@string/btnComentar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rvRespuestas" />
@@ -66,11 +56,33 @@
         android:id="@+id/btnReportar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:text="@string/btnReportar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtComentario" />
+    <EditText
+        android:id="@+id/edtComentario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="@string/edtComentario"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvRespuestas" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRespuestas"
+        android:layout_width="333dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="12dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPregunta"
+        tools:listitem="@layout/respuesta_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

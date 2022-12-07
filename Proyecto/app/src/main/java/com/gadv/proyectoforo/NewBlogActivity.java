@@ -7,19 +7,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
-public class BanActivity extends AppCompatActivity {
-    int userType;
+public class NewBlogActivity extends AppCompatActivity {
+    int userType = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ban);
+        setContentView(R.layout.activity_new_blog);
     }
 
     public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.navigation_menu_two, menu);
+        if(userType == 0) getMenuInflater().inflate(R.menu.navigation_menu, menu);
+        else getMenuInflater().inflate(R.menu.navigation_menu_two, menu);
+
         return true;
     }
 
@@ -28,23 +29,26 @@ public class BanActivity extends AppCompatActivity {
         Intent intent;
         int id = menuItem.getItemId();
 
+        if (userType == 1) {
+            if (id == R.id.navDenyAccess) {
+                intent = new Intent(NewBlogActivity.this, BanActivity.class);
+                startActivity(intent);
+            }
+        }
+
         switch (id) {
             case R.id.navWelcomeActivity:
-                intent = new Intent(BanActivity.this, WelcomeActivity.class);
+                intent = new Intent(NewBlogActivity.this, WelcomeActivity.class);
                 startActivity(intent);
                 break;
 
             case R.id.navMyBlogs:
-                intent = new Intent(BanActivity.this, MyBlogsActivity.class);
+                intent = new Intent(NewBlogActivity.this, MyBlogsActivity.class);
                 startActivity(intent);
                 break;
 
-            case R.id.navDenyAccess:
-                Toast.makeText(getApplicationContext(), "Ya te encuentras en la pantalla de Restringir acceso!", Toast.LENGTH_SHORT).show();
-                break;
-
             case R.id.navLogout:
-                intent = new Intent(BanActivity.this, MainActivity.class);
+                intent = new Intent(NewBlogActivity.this, MainActivity.class);
                 startActivity(intent);
                 break;
         }
