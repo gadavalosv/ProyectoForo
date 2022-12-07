@@ -12,10 +12,14 @@ import android.view.MenuItem;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.gadv.proyectoforo.classes.Respuesta;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,11 +42,21 @@ public class BlogActivity extends AppCompatActivity {
     }
 
     private void volleyGet() {
-        String url=getString(R.string.ip)+"preguntas.php";
+        String url=getString(R.string.ip)+"preguntas.php?idPregunta=1";
         List<Respuesta> jsonRespuestas = new ArrayList<>();
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        JSONArray jsonArray = new JSONArray(Request.Method.GET);
+        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                try {
+                    for(int i = 0; i < response.length(); i++){
+                            JSONObject jsonObject = response.getJSONObject(i);
+                            //JSONArray jsonArray = jsonObject.
+                    }
+                }
+            }
+        })
     }
 
     public boolean onCreateOptionsMenu(Menu menu){
