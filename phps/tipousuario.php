@@ -3,7 +3,7 @@
 
     $c = connectToBD();
 
-    $query = "SELECT tipo_usuario FROM usuario WHERE correo LIKE '%g';";
+    $query = "SELECT tipo_usuario FROM usuario WHERE correo LIKE 'g%';";
 
     try
     {	
