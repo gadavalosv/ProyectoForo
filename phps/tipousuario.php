@@ -36,6 +36,4 @@
     {
         return "Exception: " . $e->getMessage();
     }
-	
-	mysqli_close($c);
 ?>
