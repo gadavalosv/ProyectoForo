@@ -1,14 +1,20 @@
-<?php
-	$servername='localhost';
-	$database='id19074458_ceti_foro'
-	$username=' id19074458_foro_root';
-	$password='wc9qc{E1q6-Ooixa';
+<?PHP
 
-	$conexion=new mysqli($hostname,$username,$password,$database);
+function connectToDB()
+{
+
+	$hostname = 'localhost';
+	$database = 'id19074458_ceti_foro';
+	$username = 'id19074458_foro_root';
+	$password = 'Qfjqa[G36/X)c=W5';
+
+	$conexion = new mysqli($hostname,$username,$password,$database);
+	
 	if($conexion->connect_errno){
-	echo "El sitio web esta experimentando problemas"
+		die("El sitio web esta experimentando problemas");
+	}
 
-
+	return $conexion;
 }
 
 ?>

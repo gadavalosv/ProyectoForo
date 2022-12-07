@@ -3,6 +3,9 @@
     package="com.gadv.proyectoforo">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -11,16 +14,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar">
-
+        <activity
+            android:name=".TakeCamera"
+            android:exported="false" />
+        <activity
+            android:name=".CamaraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".multimedia"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".BanActivity"
             android:exported="false" />
         <activity
             android:name=".BlogActivity"
             android:exported="false" />
-        <!--<activity
+        <!--
+<activity
             android:name=".MainActivity"
-            android:exported="false" />!-->
+            android:exported="false" />!
+        -->
         <activity
             android:name=".MyBlogsActivity"
             android:exported="false" />
@@ -34,12 +51,6 @@
             android:name=".WelcomeActivity"
             android:exported="false" />
         <activity
-            android:name=".blog"
-            android:exported="false" />
-        <activity
-            android:name=".newblog"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -48,10 +59,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-
-
     </application>
 
 </manifest>
