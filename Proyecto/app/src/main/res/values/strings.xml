@@ -1,17 +1,13 @@
 <resources>
-    <string name="app_name">ProyectoForo</string>
+    <string name="app_name">Proyecto Foro</string>
     <string name="mssg1">Bienvenido a Intelli Inc.</string>
 
     <!--navigation_menu (sidebar)-->
     <string name="welcomeActivity">Inicio</string>
     <string name="myBlogs">Mis foros</string>
-    <!--Only for admin-->
-    <string name="denyAccess">Restringir acceso</string>
     <string name="logout">Cerrar sesión </string>
-
-    <!--hamburguer icon-->
-    <string name="drawer_open">Abrir sidebar</string>
-    <string name="drawer_close">Cerrar sidebar</string>
+        <!--Only for admin-->
+    <string name="denyAccess">Restringir acceso</string>
 
     <!--    Activity Register    -->
     <string name="email">Correo electrónico</string>
@@ -55,9 +51,5 @@
     <string name="duda2">Duda 2</string>
     <string name="crearForo">Crear foro</string>
 
-
-
     <string name="ip">https://gadvnautica.000webhostapp.com/pregunta.php</string>
-
-
 </resources>
