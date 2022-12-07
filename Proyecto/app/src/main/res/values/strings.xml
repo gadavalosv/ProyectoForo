@@ -16,7 +16,7 @@
     <string name="name">Nombre</string>
     <string name="lastN">Apellidos</string>
     <string name="registry">Registrar</string>
-<<<<<<< HEAD
+
     <string name="blogTitulo">Blog</string>
     <string name="contenidoForo">Contenido Del Foro</string>
     <string name="seccionComentarios">Seccion De Comentarios</string>
@@ -27,7 +27,7 @@
     <string name="Titulo">Titulo del Blog</string>
     <string name="Contenido">Contenido</string>
     <string name="Subir">Subir</string>
-=======
+
 
     <!--    Activity Blog    -->
     <string name="edtComentario">Dejar un Comentario</string>
@@ -42,12 +42,7 @@
     <string name="btnBloquear">Bloquear</string>
 
     <!--    Activity Blog    -->
-    <string name="tituloBolg">BLOG</string>
-    <string name="contenidoBlog">Contenido del Foro</string>
-    <string name="seccionComentarios">Seccion de comentarios</string>
-    <string name="dejarComentario">Dejar un comentario</string>
-    <string name="reportarUsuario">Reportar Usuario</string>
-    <string name="comentar">Comentar</string>
+
 
     <!--    Activity New Blog    -->
     <string name="nuevoBlog">Nuevo Foro</string>
