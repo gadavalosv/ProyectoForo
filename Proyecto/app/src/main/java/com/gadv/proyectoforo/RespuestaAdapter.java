@@ -1,8 +1,12 @@
 package com.gadv.proyectoforo;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,12 +28,13 @@ public class RespuestaAdapter extends RecyclerView.Adapter<RespuestaAdapter.View
     @NonNull
     @Override
     public RespuestaAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View view = LayoutInflater.from(context).inflate(R.layout.activity_blog, parent, false);
+        return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull RespuestaAdapter.ViewHolder holder, int position) {
-
+        //
     }
 
     @Override
@@ -38,6 +43,13 @@ public class RespuestaAdapter extends RecyclerView.Adapter<RespuestaAdapter.View
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+        private TextView tvNombreUsuario;
+        private TextView tvRespuesta;
+        private TextView tvCalificacionActual;
+        private EditText txtCalificacion;
+        private Button btnCalificar;
+
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
         }

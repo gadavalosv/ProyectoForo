@@ -35,6 +35,7 @@
     <string name="tvTituloForo">Título del Foro</string>
     <string name="edtPregunta">Contenido del foro</string>
     <string name="btnReportar">Reportar Usuario</string>
+    <string name="tvCalificacion">Calificacion:</string>
 
     <!--    Activity Ban    -->
     <string name="tvTituloBan">Usuarios Reportados</string>
