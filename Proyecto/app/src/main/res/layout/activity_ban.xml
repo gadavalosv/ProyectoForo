@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".BanActivity">
 
     <TextView
         android:id="@+id/tvTituloBan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="100dp"
         android:text="@string/tvTituloBan"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,6 +24,7 @@
         android:layout_width="333dp"
         android:layout_height="280dp"
         android:layout_marginTop="24dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTituloBan" />
@@ -31,7 +33,7 @@
         android:id="@+id/btnQuitarReporte"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="84dp"
         android:layout_marginTop="32dp"
         android:text="@string/btnQuitarReporte"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,4 +48,5 @@
         android:text="@string/btnBloquear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rvRespuestas" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

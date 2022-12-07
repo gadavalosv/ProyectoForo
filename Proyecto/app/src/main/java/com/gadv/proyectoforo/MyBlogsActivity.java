@@ -7,14 +7,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.Toast;
 
-public class BlogActivity extends AppCompatActivity {
+public class MyBlogsActivity extends AppCompatActivity {
     int userType = 1;
+
+    Intent intent;
+    Button buttonNewBlog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blog);
+        setContentView(R.layout.activity_my_blogs);
+
+        buttonNewBlog = findViewById(R.id.crearForo);
+        buttonNewBlog.setOnClickListener(view -> newBlog());
     }
 
     public boolean onCreateOptionsMenu(Menu menu){
@@ -31,28 +39,32 @@ public class BlogActivity extends AppCompatActivity {
 
         if (userType == 1) {
             if (id == R.id.navDenyAccess) {
-                intent = new Intent(BlogActivity.this, BanActivity.class);
+                intent = new Intent(MyBlogsActivity.this, BanActivity.class);
                 startActivity(intent);
             }
         }
 
         switch (id) {
             case R.id.navWelcomeActivity:
-                intent = new Intent(BlogActivity.this, WelcomeActivity.class);
+                intent = new Intent(MyBlogsActivity.this, WelcomeActivity.class);
                 startActivity(intent);
                 break;
 
             case R.id.navMyBlogs:
-                intent = new Intent(BlogActivity.this, MyBlogsActivity.class);
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(), "Ya te encuentras en la pantalla de Mis blogs!", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.navLogout:
-                intent = new Intent(BlogActivity.this, MainActivity.class);
+                intent = new Intent(MyBlogsActivity.this, MainActivity.class);
                 startActivity(intent);
                 break;
         }
 
         return super.onOptionsItemSelected(menuItem);
+    }
+
+    private void newBlog(){
+        intent = new Intent(MyBlogsActivity.this, NewBlogActivity.class);
+        startActivity(intent);
     }
 }

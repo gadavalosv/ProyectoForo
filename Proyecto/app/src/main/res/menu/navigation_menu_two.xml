@@ -8,6 +8,9 @@
             android:id="@+id/navMyBlogs"
             android:title="@string/myBlogs" />
         <item
+            android:id="@+id/navDenyAccess"
+            android:title="@string/denyAccess" />
+        <item
             android:id="@+id/navLogout"
             android:title="@string/logout" />
     </group>

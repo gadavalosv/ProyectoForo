@@ -1,5 +1,15 @@
 <resources>
-    <string name="app_name">ProyectoForo</string>
+    <string name="app_name">Proyecto Foro</string>
+    <string name="mssg1">Bienvenido a Intelli Inc.</string>
+
+    <!--navigation_menu (sidebar)-->
+    <string name="welcomeActivity">Inicio</string>
+    <string name="myBlogs">Mis foros</string>
+    <string name="logout">Cerrar sesión </string>
+        <!--Only for admin-->
+    <string name="denyAccess">Restringir acceso</string>
+
+    <!--    Activity Register    -->
     <string name="email">Correo electrónico</string>
     <string name="password">Contraseña</string>
     <string name="login">Entrar</string>
@@ -31,15 +41,27 @@
     <string name="btnQuitarReporte">Quitar reporte</string>
     <string name="btnBloquear">Bloquear</string>
 
-    <!--navigation_menu (sidebar)-->
-    <string name="myBlogs">Mis foros</string>
-    <string name="searchBlogs">Buscar foros</string>
-        <!--Only for admin-->
-        <string name="denyAccess">Restringir acceso</string>
-    <string name="logout">Cerrar sesión </string>
+    <!--    Activity Blog    -->
+    <string name="tituloBolg">BLOG</string>
+    <string name="contenidoBlog">Contenido del Foro</string>
+    <string name="seccionComentarios">Seccion de comentarios</string>
+    <string name="dejarComentario">Dejar un comentario</string>
+    <string name="reportarUsuario">Reportar Usuario</string>
+    <string name="comentar">Comentar</string>
 
-    <!--hamburguer icon-->
-    <string name="drawer_open">Abrir sidebar</string>
-    <string name="drawer_close">Cerrar sidebar</string>
->>>>>>> main
+    <!--    Activity New Blog    -->
+    <string name="nuevoBlog">Nuevo Foro</string>
+    <string name="tituloNewBlog">Escribe El Titulo Del Blog</string>
+    <string name="contenidoNewBlog">Contenido Del Foro</string>
+    <string name="subirBlog">Subir Foro</string>
+
+    <!--    Activity My Blogs    -->
+    <string name="misBlog">Mis Blogs</string>
+    <string name="buscarForo">Buscar Foro</string>
+    <string name="pregunta1">Pregunta 1</string>
+    <string name="temaInteres1">Tema de interes</string>
+    <string name="duda2">Duda 2</string>
+    <string name="crearForo">Crear foro</string>
+
+    <string name="ip">https://gadvnautica.000webhostapp.com/pregunta.php</string>
 </resources>
