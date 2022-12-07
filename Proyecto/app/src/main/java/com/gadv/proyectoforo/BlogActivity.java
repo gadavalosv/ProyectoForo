@@ -12,6 +12,8 @@ import android.view.View;
 public class BlogActivity extends AppCompatActivity {
     int userType = 1;
 
+    Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +29,6 @@ public class BlogActivity extends AppCompatActivity {
 
     @SuppressLint("NonConstantResourceId")
     public boolean onOptionsItemSelected(MenuItem menuItem) {
-        Intent intent;
         int id = menuItem.getItemId();
 
         if (userType == 1) {
@@ -48,6 +49,11 @@ public class BlogActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
 
+            case R.id.navTakePicture:
+                intent = new Intent(BlogActivity.this, TakeCamera.class);
+                startActivity(intent);
+                break;
+
             case R.id.navLogout:
                 intent = new Intent(BlogActivity.this, MainActivity.class);
                 startActivity(intent);
@@ -55,9 +61,10 @@ public class BlogActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(menuItem);
-    }public void escuchar(View view){
-        Intent intent = new Intent(BlogActivity.this,multimedia.class);
-        startActivity(intent);
+    }
 
+    public void escuchar(View view){
+        intent = new Intent(BlogActivity.this,multimedia.class);
+        startActivity(intent);
     }
 }

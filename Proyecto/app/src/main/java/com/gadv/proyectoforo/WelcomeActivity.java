@@ -47,6 +47,11 @@ public class WelcomeActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
 
+            case R.id.navTakePicture:
+                intent = new Intent(WelcomeActivity.this, TakeCamera.class);
+                startActivity(intent);
+                break;
+
             case R.id.navLogout:
                 intent = new Intent(WelcomeActivity.this, MainActivity.class);
                 startActivity(intent);

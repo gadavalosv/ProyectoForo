@@ -11,6 +11,9 @@
             android:id="@+id/navDenyAccess"
             android:title="@string/denyAccess" />
         <item
+            android:id="@+id/navTakePicture"
+            android:title="@string/takePicture" />
+        <item
             android:id="@+id/navLogout"
             android:title="@string/logout" />
     </group>

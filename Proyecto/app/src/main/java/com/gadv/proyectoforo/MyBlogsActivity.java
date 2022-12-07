@@ -54,6 +54,11 @@ public class MyBlogsActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Ya te encuentras en la pantalla de Mis blogs!", Toast.LENGTH_SHORT).show();
                 break;
 
+            case R.id.navTakePicture:
+                intent = new Intent(MyBlogsActivity.this, TakeCamera.class);
+                startActivity(intent);
+                break;
+
             case R.id.navLogout:
                 intent = new Intent(MyBlogsActivity.this, MainActivity.class);
                 startActivity(intent);

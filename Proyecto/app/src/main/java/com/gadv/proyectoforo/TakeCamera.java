@@ -14,18 +14,26 @@ import android.widget.Toast;
 
 public class TakeCamera extends AppCompatActivity {
 
-    Button buttonCamara;
-    ImageView imageView;
+    Button btnCamera;
+    ImageView imgViewCamera;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_take_camera);
 
+        btnCamera = findViewById(R.id.btnCamera);
+        btnCamera.setOnClickListener(view -> takePic());
 
-        buttonCamara = findViewById(R.id.buttonCamara);
-        imageView = findViewById(R.id.imageView);
+        imgViewCamera = findViewById(R.id.imgViewCamera);
+    }
 
-        buttonCamara.setOnClickListener(view -> tomarFoto());
+    @SuppressLint("QueryPermissionsNeeded")
+    private void takePic(){
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+        if(intent.resolveActivity(getPackageManager()) != null)
+            startActivityForResult(intent,1);
     }
 
     @Override
@@ -39,15 +47,7 @@ public class TakeCamera extends AppCompatActivity {
             assert data != null;
             Bundle extras = data.getExtras();
             Bitmap imgBitmap = (Bitmap) extras.get("data");
-            imageView.setImageBitmap(imgBitmap);
+            imgViewCamera.setImageBitmap(imgBitmap);
         }
-    }
-
-    @SuppressLint("QueryPermissionsNeeded")
-    private void tomarFoto(){
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-
-        if(intent.resolveActivity(getPackageManager()) != null)
-            startActivityForResult(intent,1);
     }
 }
