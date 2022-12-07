@@ -14,6 +14,7 @@
         android:layout_marginTop="100dp"
         android:text="@string/tvTituloForo"
         android:textSize="24sp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -38,6 +39,8 @@
         android:gravity="start|top"
         android:hint="@string/edtPregunta"
         android:inputType="textMultiLine"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTituloForo" />
@@ -71,6 +74,8 @@
         android:ems="10"
         android:hint="@string/edtComentario"
         android:minHeight="48dp"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rvRespuestas" />
 
@@ -79,6 +84,7 @@
         android:layout_width="333dp"
         android:layout_height="200dp"
         android:layout_marginTop="12dp"
+        android:textColor="@color/black"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

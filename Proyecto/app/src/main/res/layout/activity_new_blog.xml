@@ -14,6 +14,7 @@
         android:layout_marginTop="100dp"
         android:text="@string/nuevoBlog"
         android:textSize="24sp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -32,12 +33,16 @@
         android:id="@+id/tituloNewBlog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="120dp"
         android:ems="10"
         android:hint="titulo"
         android:inputType="textPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/nuevoBlog"
-        tools:layout_editor_absoluteX="28dp" />
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nuevoBlog" />
 
     <EditText
         android:id="@+id/contenidoNewBlog"
@@ -47,7 +52,11 @@
         android:ems="10"
         android:hint="contenido"
         android:inputType="textPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/tituloNewBlog"
-        tools:layout_editor_absoluteX="28dp" />
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.139"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloNewBlog" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

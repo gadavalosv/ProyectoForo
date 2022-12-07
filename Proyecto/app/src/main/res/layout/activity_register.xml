@@ -24,6 +24,7 @@
         android:layout_marginTop="32dp"
         android:text="@string/mssg1"
         android:textSize="24sp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img2" />
@@ -37,6 +38,8 @@
         android:ems="10"
         android:hint="@string/name"
         android:textSize="18sp"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtTitle2" />
 
@@ -49,6 +52,8 @@
         android:ems="10"
         android:hint="@string/lastN"
         android:textSize="18sp"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtName" />
 
@@ -61,6 +66,8 @@
         android:ems="10"
         android:hint="@string/email"
         android:textSize="18sp"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtLastN" />
 
@@ -73,6 +80,8 @@
         android:ems="10"
         android:hint="@string/password"
         android:textSize="18sp"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtEmail2" />
 

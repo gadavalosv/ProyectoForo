@@ -98,6 +98,11 @@ public class BanActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Ya te encuentras en la pantalla de Restringir acceso!", Toast.LENGTH_SHORT).show();
                 break;
 
+            case R.id.navTakePicture:
+                intent = new Intent(BanActivity.this, TakeCamera.class);
+                startActivity(intent);
+                break;
+
             case R.id.navLogout:
                 intent = new Intent(BanActivity.this, MainActivity.class);
                 startActivity(intent);
