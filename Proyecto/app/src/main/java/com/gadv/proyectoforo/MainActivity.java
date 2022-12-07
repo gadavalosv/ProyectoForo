@@ -2,6 +2,7 @@ package com.gadv.proyectoforo;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import android.app.Notification;
 import android.graphics.Color;
@@ -20,5 +21,8 @@ public class MainActivity extends AppCompatActivity {
         builder.setContentText("Bienvenido a la mejor app para el ceti");
         builder.setColor(Color.BLUE);
         builder.setDefaults(Notification.DEFAULT_SOUND);
+        builder.setPriority(NotificationCompat.PRIORITY_DEFAULT);
+        NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(getApplicationContext());
+        notificationManagerCompat.notify(NOTIFICACION_ID,builder.build());
     }
 }
